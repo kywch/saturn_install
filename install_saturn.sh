@@ -22,3 +22,5 @@ find ${CONDA_DIR} -type f,l -name '*.pyc' -delete
 find ${CONDA_DIR} -type f,l -name '*.a' -delete && \
 find ${CONDA_DIR} -type f,l -name '*.js.map' -delete
 echo '' > ${CONDA_DIR}/envs/saturn/conda-meta/history
+
+cd $HOME/workspace
