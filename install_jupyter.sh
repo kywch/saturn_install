@@ -63,6 +63,7 @@ rm -rf $HOME/.node-gyp
 rm -rf $HOME/.local
 
 # post install env setup
+mkdir $HOME/workspace
 mkdir $HOME/npm
 export NPM_DIR=$HOME/npm
 export NB_PYTHON_PREFIX=$CONDA_DIR/envs/saturn
