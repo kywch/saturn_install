@@ -8,6 +8,12 @@ JUPYTER_SATURN_VERSION=2021.04.19
 set -ex
 export PATH="${CONDA_BIN}:${PATH}"
 
+# create workspace and move the examples from the start
+mkdir $HOME/workspace
+mv examples $HOME/workspace
+
+cd ${HOME}
+
 echo "updating conda:"
 
 # Update conda
@@ -17,8 +23,6 @@ conda update -y conda
 conda config --system --add channels conda-forge
 conda config --system --set auto_update_conda false
 conda config --system --set show_channel_urls true
-
-cd $(dirname $0)
 
 echo "installing root env:"
 
@@ -63,7 +67,6 @@ rm -rf $HOME/.node-gyp
 rm -rf $HOME/.local
 
 # post install env setup
-mkdir $HOME/workspace
 mkdir $HOME/npm
 export NPM_DIR=$HOME/npm
 export NB_PYTHON_PREFIX=$CONDA_DIR/envs/saturn
