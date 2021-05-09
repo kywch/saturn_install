@@ -33,8 +33,8 @@ export JUPYTER_SATURN_VERSION
 wget --quiet $URL -O jupyter-temp.yml
 envsubst < jupyter-temp.yml > jupyter.yml
 
-cat /tmp/environment.yml
-conda env update -n root  -f jupyter.yml
+cat jupyter.yml
+conda env update -n root -f jupyter.yml
 jupyter serverextension enable --sys-prefix jupyter_server_proxy
 jupyter serverextension enable --py jsaturn --sys-prefix
 jupyter serverextension enable dask_labextension --sys-prefix
