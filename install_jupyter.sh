@@ -9,7 +9,8 @@ set -ex
 export PATH="${CONDA_BIN}:${PATH}"
 
 # create workspace and move the examples from the start
-mkdir $HOME/workspace
+mkdir -p $HOME/workspace
+rm -rf $HOME/workspace/examples
 mv examples $HOME/workspace
 
 cd ${HOME}
@@ -67,7 +68,7 @@ rm -rf $HOME/.node-gyp
 rm -rf $HOME/.local
 
 # post install env setup
-mkdir $HOME/npm
+mkdir -p $HOME/npm
 export NPM_DIR=$HOME/npm
 export NB_PYTHON_PREFIX=$CONDA_DIR/envs/saturn
 export PATH="${NB_PYTHON_PREFIX}/bin:${CONDA_BIN}:${NPM_DIR}/bin:${HOME}/.local/bin:${PATH}"
