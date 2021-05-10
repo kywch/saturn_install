@@ -11,7 +11,8 @@ export PATH="${CONDA_BIN}:${PATH}"
 # create workspace and move the examples from the start
 mkdir -p $HOME/workspace
 rm -rf $HOME/workspace/saturn-examples
-mv examples $HOME/workspace/saturn-examples
+cd ${HOME}/workspace
+git clone https://github.com/kywch/saturn-examples.git
 
 cd ${HOME}
 
