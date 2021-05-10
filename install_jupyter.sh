@@ -10,8 +10,8 @@ export PATH="${CONDA_BIN}:${PATH}"
 
 # create workspace and move the examples from the start
 mkdir -p $HOME/workspace
-rm -rf $HOME/workspace/examples
-mv examples $HOME/workspace
+rm -rf $HOME/workspace/saturn-examples
+mv examples $HOME/workspace/saturn-examples
 
 cd ${HOME}
 
