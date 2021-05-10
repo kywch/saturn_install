@@ -29,6 +29,7 @@ dependencies:
 - s3fs
 - scikit-learn
 - scipy
+- seaborn
 - voila
 - xgboost=1.3.0dev.rapidsai0.17=cuda10.1py37_0
 - pip:
@@ -37,3 +38,4 @@ dependencies:
   - snowflake-connector-python
   - pyathena>1.11,<2
   - pymysql
+  - gcsfs
