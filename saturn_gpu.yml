@@ -6,6 +6,7 @@ channels:
 - conda-forge
 dependencies:
 - blas=*=mkl
+- blazingsql
 - bokeh
 - dask-ml
 - dask=2.30.0
