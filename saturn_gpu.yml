@@ -2,6 +2,7 @@ name: saturn
 channels:
 - nvidia
 - rapidsai
+- blazingsql
 - nodefaults
 - conda-forge
 dependencies:
