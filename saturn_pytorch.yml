@@ -4,7 +4,7 @@ channels:
 - fastai
 - rapidsai
 - huggingface
-- defaults
+- nodefaults
 - conda-forge
 dependencies:
 - blas=*=mkl
@@ -28,7 +28,7 @@ dependencies:
 - python-graphviz
 - pytorch=1.7.0=py3.7_cuda10.1.243_cudnn7.6.3_0
 - s3fs
-- tensorboard=2.2.1
+- tensorboard
 - torchvision=0.8.1=py37_cu101
 - transformers
 - voila
