@@ -42,3 +42,5 @@ dependencies:
   - gcsfs
   - sqlalchemy
   - lifetimes
+  - lifelines
+  - convoys
