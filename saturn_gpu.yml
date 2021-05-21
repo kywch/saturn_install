@@ -41,3 +41,4 @@ dependencies:
   - pyathena>1.11,<2
   - gcsfs
   - sqlalchemy
+  - lifetimes
