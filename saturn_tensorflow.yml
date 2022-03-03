@@ -1,8 +1,8 @@
-name: saturn
+name: satf
 channels:
-- defaults
 - conda-forge
 - rapidsai
+- defaults
 dependencies:
 - blas=*=mkl
 - bokeh
