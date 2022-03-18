@@ -3,7 +3,7 @@
 # env variables
 CONDA_DIR=${HOME}/miniconda3
 CONDA_BIN=${CONDA_DIR}/bin
-JUPYTER_SATURN_VERSION=2021.04.19
+JUPYTER_SATURN_VERSION=2022.01.06-1
 
 set -ex
 export PATH="${CONDA_BIN}:${PATH}"
@@ -16,16 +16,6 @@ git clone https://github.com/kywch/saturn-examples.git
 
 cd ${HOME}
 
-echo "updating conda:"
-
-# Update conda
-conda update -y conda
-
-# Allow easy direct installs from conda forge
-conda config --system --add channels conda-forge
-conda config --system --set auto_update_conda false
-conda config --system --set show_channel_urls true
-
 echo "installing root env:"
 
 # download Saturn jupyter server yml
@@ -35,28 +25,8 @@ wget --quiet $URL -O jupyter-temp.yml
 envsubst < jupyter-temp.yml > jupyter.yml
 
 cat jupyter.yml
-conda env update -n root -f jupyter.yml
-jupyter serverextension enable --sys-prefix jupyter_server_proxy
-jupyter serverextension enable --py jsaturn --sys-prefix
-jupyter serverextension enable dask_labextension --sys-prefix
-jupyter serverextension enable --py jupyterlab_code_formatter --sys-prefix
-
-jupyter labextension install @bokeh/jupyter_bokeh
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
-jupyter labextension install dask-labextension@3.0.0
-jupyter labextension install @ryantam626/jupyterlab_code_formatter@1.3.8
-jupyter labextension install @pyviz/jupyterlab_pyviz
-jupyter labextension install jupyterlab-execute-time
-jupyter labextension install @telamonian/theme-darcula
-jupyter labextension install jupyterlab-python-file
-
-cd ${CONDA_DIR}/jsaturn_ext
-npm install
-npm run build
-jupyter labextension install
-
-cd ${HOME}
-rm -rf ${CONDA_DIR}/jsaturn_ext
+conda install -c conda-forge mamba
+mamba env update -n root  -f jupyter.yml
 
 conda clean -afy
 jupyter lab clean
