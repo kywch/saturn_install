@@ -19,7 +19,7 @@ cd ${HOME}
 echo "installing root env:"
 
 # download Saturn jupyter server yml
-URL="https://raw.githubusercontent.com/saturncloud/images/main/saturnbase-gpu/environment.yml"
+URL="https://raw.githubusercontent.com/saturncloud/images/main/saturnbase-gpu-11.2/environment.yml"
 export JUPYTER_SATURN_VERSION
 wget --quiet $URL -O jupyter-temp.yml
 envsubst < jupyter-temp.yml > jupyter.yml
