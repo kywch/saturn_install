@@ -37,8 +37,3 @@ dependencies:
   - prefect-saturn>=0.5.1
   - snowflake-connector-python
   - pyathena
-  - sqlalchemy
-  - lifetimes
-  - lifelines
-  - convoys
-  - retentioneering
