@@ -27,7 +27,7 @@ rm -rf $HOME/.local
 echo "installing saturn-rapids:"
 mamba env create -f saturn-rapids.yml
 
-${CONDA_DIR}/envs/saturn-rapids/bin/python -m ipykernel install --user \
+${CONDA_DIR}/envs/saturn-rapids/bin/python -m ipykernel install \
         --name saturn-rapids \
         --display-name 'RAPIDS' \
         --prefix=${CONDA_DIR}
@@ -36,7 +36,7 @@ ${CONDA_DIR}/envs/saturn-rapids/bin/python -m ipykernel install --user \
 echo "installing saturn-pytorch:"
 mamba env create -f saturn-pytorch.yml
 
-${CONDA_DIR}/envs/saturn-pytorch/bin/python -m ipykernel install --user \
+${CONDA_DIR}/envs/saturn-pytorch/bin/python -m ipykernel install \
         --name saturn-pytorch \
         --display-name 'pytorch' \
         --prefix=${CONDA_DIR}
@@ -45,7 +45,7 @@ ${CONDA_DIR}/envs/saturn-pytorch/bin/python -m ipykernel install --user \
 echo "installing saturn-tensorflow:"
 mamba env create -f saturn-tensorflow.yml
 
-${CONDA_DIR}/envs/saturn-tensorflow/bin/python -m ipykernel install --user \
+${CONDA_DIR}/envs/saturn-tensorflow/bin/python -m ipykernel install \
         --name saturn-tensorflow \
         --display-name 'tensorflow' \
         --prefix=${CONDA_DIR}
