@@ -63,6 +63,6 @@ find ${CONDA_DIR}/ -name '*.js.map' \( -type f -o -type l \) -delete
 echo "creating the workspace:"
 # create workspace and move the examples from the start
 mkdir -p $HOME/workspace
-rm -rf $HOME/workspace/saturn-examples
 cd ${HOME}/workspace
+rm -rf $HOME/workspace/saturn-examples
 git clone https://github.com/kywch/saturn-examples.git
