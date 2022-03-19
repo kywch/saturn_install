@@ -55,9 +55,9 @@ echo "cleaning conda:"
 
 ${CONDA_DIR}/bin/conda clean -afy 
 
-find ${CONDA_DIR}/ -type f,l -name '*.pyc' -delete
-find ${CONDA_DIR}/ -type f,l -name '*.a' -delete
-find ${CONDA_DIR}/ -type f,l -name '*.js.map' -delete
+find ${CONDA_DIR}/ -name '*.pyc' \( -type f -o -type l \) -delete
+find ${CONDA_DIR}/ -name '*.a' \( -type f -o -type l \) -delete
+find ${CONDA_DIR}/ -name '*.js.map' \( -type f -o -type l \) -delete
 
 
 echo "creating the workspace:"
