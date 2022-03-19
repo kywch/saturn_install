@@ -8,13 +8,6 @@ JUPYTER_SATURN_VERSION=2022.01.06-1
 set -ex
 export PATH="${CONDA_BIN}:${PATH}"
 
-# create workspace and move the examples from the start
-mkdir -p $HOME/workspace
-rm -rf $HOME/workspace/saturn-examples
-cd ${HOME}/workspace
-git clone https://github.com/kywch/saturn-examples.git
-
-cd ${HOME}
 
 echo "installing mamba:"
 conda install -c conda-forge mamba
@@ -66,4 +59,10 @@ find ${CONDA_DIR}/ -type f,l -name '*.pyc' -delete
 find ${CONDA_DIR}/ -type f,l -name '*.a' -delete
 find ${CONDA_DIR}/ -type f,l -name '*.js.map' -delete
 
-cd $HOME/workspace
+
+echo "creating the workspace:"
+# create workspace and move the examples from the start
+mkdir -p $HOME/workspace
+rm -rf $HOME/workspace/saturn-examples
+cd ${HOME}/workspace
+git clone https://github.com/kywch/saturn-examples.git
