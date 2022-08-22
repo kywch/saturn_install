@@ -29,3 +29,4 @@ dependencies:
     - jupyter_bokeh
     - jupyterlab_widgets
     - theme-darcula
+    - mlflow
